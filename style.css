@@ -1,0 +1,86 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Poppins:wght@200&display=swap');
+
+*{
+    font-family:"barlow",sans-serif;
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.35s linear; 
+   
+    
+}
+section{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #ededed;
+}
+.business{
+    background-color: #4074ce;
+    color: white; 
+    width: 640px;
+    height: 360px;
+    display: grid;
+    grid-template-rows: 1fr 0px; 
+    box-shadow: 0 80px 48px -48px #10101045;
+}
+.business:hover{
+    grid-template-rows: 1fr 96px;
+
+}
+.business .information {
+    display: flex ;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight:700;
+}
+.business .information span{
+    opacity: 0.4;
+}
+.business .information span.active{
+    opacity: 1;
+}
+.business .list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-top: 2px solid #fff6;
+    transform: scaleY(0);
+}
+.business:hover .list{
+    transform: scaleY(1);
+}
+.business .list button{
+    border: none;
+    background-color: transparent;
+    margin-inline: 0.25rem;
+    color: white;
+    height: 80px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.65;
+    cursor: pointer;
+ }
+.business .list button.active,
+.business .list button:hover{
+    opacity: 1;
+} 
+.business .list button ion-icon{
+    font-size: 1.5rem;
+}
+.business .list button label{
+    font-size: 0rem;
+    font-weight: 600;
+}
+.business .list button.active label{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
